@@ -28,7 +28,9 @@
       {
         NameValueCollection nameValueCollection = new NameValueCollection();
         nameValueCollection["itemid"] = iD.ToString();
-        nameValueCollection["language"] = ContextItem.Language.Name;
+        #region Modified code
+        nameValueCollection["language"] = ContentLanguage.Name;
+        #endregion
         nameValueCollection["test"] = "testvalue";
         Context.ClientPage.Start(this, "CopyDatasourceClientPipeline", nameValueCollection);
       }
@@ -40,7 +42,9 @@
       {
         NameValueCollection nameValueCollection = new NameValueCollection();
         nameValueCollection["itemid"] = id;
-        nameValueCollection["language"] = ContextItem.Language.Name;
+        #region Modified code
+        nameValueCollection["language"] = ContentLanguage.Name;
+        #endregion
         nameValueCollection["test"] = "testvalue";
         Context.ClientPage.Start(this, "CreateDatasourceClientPipeline", nameValueCollection);
       }
@@ -50,7 +54,9 @@
     {
       NameValueCollection nameValueCollection = new NameValueCollection();
       nameValueCollection["itemid"] = id;
-      nameValueCollection["language"] = ContextItem.Language.Name;
+      #region Modified code
+      nameValueCollection["language"] = ContentLanguage.Name;
+      #endregion
       nameValueCollection["test"] = "testvalue";
       Context.ClientPage.Start(this, "CreateLocalDatasourceClientPipeline", nameValueCollection);
     }
