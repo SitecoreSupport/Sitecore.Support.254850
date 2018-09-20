@@ -73,7 +73,6 @@
     <Compile Include="XA\Foundation\LocalDatasources\Dialogs\SelectRenderingDatasourceForm.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\zzz\Sitecore.Support.254850.config" />
     <Content Include="sitecore\shell\Override\Applications\Dialogs\SelectRenderingDatasource\SelectRenderingDatasource.xml" />
   </ItemGroup>
   <ItemGroup>
