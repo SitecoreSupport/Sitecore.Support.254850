@@ -1,11 +1,8 @@
 ﻿namespace Sitecore.Support.XA.Foundation.LocalDatasources.Dialogs
 {
-  using Sitecore;
   using Sitecore.Data;
   using Sitecore.Globalization;
   using System.Collections.Specialized;
-  using System.Linq;
-  using System.Web;
 
   public class SelectRenderingDatasourceForm : Sitecore.XA.Foundation.LocalDatasources.Dialogs.SelectRenderingDatasourceForm
   {
@@ -32,7 +29,7 @@
         nameValueCollection["language"] = ContentLanguage.Name;
         #endregion
         nameValueCollection["test"] = "testvalue";
-        Context.ClientPage.Start(this, "CopyDatasourceClientPipeline", nameValueCollection);
+        this.Context.ClientPage.Start(this, "CopyDatasourceClientPipeline", nameValueCollection);
       }
     }
 
@@ -46,7 +43,7 @@
         nameValueCollection["language"] = ContentLanguage.Name;
         #endregion
         nameValueCollection["test"] = "testvalue";
-        Context.ClientPage.Start(this, "CreateDatasourceClientPipeline", nameValueCollection);
+        this.Context.ClientPage.Start(this, "CreateDatasourceClientPipeline", nameValueCollection);
       }
     }
     
@@ -58,7 +55,7 @@
       nameValueCollection["language"] = ContentLanguage.Name;
       #endregion
       nameValueCollection["test"] = "testvalue";
-      Context.ClientPage.Start(this, "CreateLocalDatasourceClientPipeline", nameValueCollection);
+      this.Context.ClientPage.Start(this, "CreateLocalDatasourceClientPipeline", nameValueCollection);
     }
     
   }
